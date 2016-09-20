@@ -8,19 +8,9 @@ module ::WatchCategory
 
   def self.watch_category!
     groups_cats = {
-      # "group" => ["category", "another-top-level-category", ["parent-category", "sub-category"] ],
-      "coordinating-cmte" => [ ["closed-groups", "coordinating-committee"] ],
-      "digcol-cmte" => [ ["closed-groups", "digital-collections-committee"] ],
-      "digped-cmte" => [ ["closed-groups", "digital-pedagogy-committee"] ],
-      "digschol-cmte" => [ ["closed-groups", "digital-scholarship-committee"] ],
-      "eresources-cmte" => [ ["closed-groups", "e-resources-committee"], ["libraries", "buyers-group"] ],
-      "infolit-cmte" => [ ["closed-groups", "information-literacy-committee"] ],
-      "inst-research-cmte" => [ ["closed-groups", "institutional-research-assessment-committee"] ],
-      "oclc-cmte" => [ ["closed-groups", "oclc-programs-committee"] ],
-      "profdev-cmte" => [ ["closed-groups", "professional-development-committee"] ],
-      "lib-buyers" => [ ["libraries", "buyers-group"] ],
+      #"lib-buyers" => [ ["libraries", "buyers-group"] ],
       # "everyone" makes every user watch the listed categories
-      "everyone" => [ "announcements" ]
+      "everyone" => [ "anuncios-institucionales" ]
     }
 
     groups_cats.each do |group_name, cats|
@@ -57,7 +47,7 @@ end
 after_initialize do
   module ::WatchCategory
     class WatchCategoryJob < ::Jobs::Scheduled
-      every 6.hours
+      every 3.hours
 
       def execute(args)
         WatchCategory.watch_category!
