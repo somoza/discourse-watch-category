@@ -8,12 +8,3 @@ Configure by editing `plugin.rb`.
 To prevent conflicts with my changes, you should fork your own copy of this repository and then follow the typical [installation steps](https://meta.discourse.org/t/install-a-plugin/19157).
 
 The plugin runs every 3 hours. You can trigger it manually at /sidekiq/scheduler
-
-## Contributors
-
-Arpit Jalan, Jared Needell, Thomas Purchas, Alex Armstrong
-
-
-## License
-
-MIT
