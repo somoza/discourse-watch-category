@@ -8,7 +8,7 @@ module ::WatchCategory
 
   def self.watch_category!
     groups_cats = {
-      #"lib-buyers" => [ ["libraries", "buyers-group"] ],
+      "Redes" => ["redes-cab"],
       # "everyone" makes every user watch the listed categories
       "everyone" => [ "anuncios-institucionales" ]
     }
